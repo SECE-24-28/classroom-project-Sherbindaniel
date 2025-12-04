@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <button id="bt">Click me!</button>
+
+    <script>
+        let btn=document.getElementById("bt");
+        btn.addEventListener("click",function()
+    {
+        alert("Success...")
+    });
+    </script> -->
+    <input type="text" placeholder="Enter item name" class="value">
+    <button id="bt">Add</button>
+    <ul id="list"></ul>
+    <script>
+        function add()
+        {
+            let btn=document.getElementById("bt");
+            var val=document.getElementById("value").value;
+            let li=document.createElement("li")
+            li.textContent=val;
+
+            document.getElementById("list").appendChild(li);
+            document.getElementById("value").value="";
+            
+        }
+    </script>
+</body>

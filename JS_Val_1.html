@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="">
+            <p id="error" style="color: red;"></p>
+            <label for="">User Name</label>
+            <input type="text" id="user">
+
+            <label for="">Email</label>
+            <input type="text" id="mail">
+
+            <button type="submit" id="sub">Submit</button>
+
+        </form>
+
+
+        <script>
+            let us=document.getElementById("")
+            let ma=document.getElementById("mail");
+            let er=document.getElementById("error");
+            let sub=document.getElementById("sub");
+            sub.addEventListener("click",(e)=>
+        {
+            e.preventDefault()
+            if(us.value==""||ma.value=="")
+                er.innerHTML="Fields should bot be empty"
+            else
+            {
+                alert("Login Success...")
+                us.value="";
+                ma.value="";
+                er.innerHTML=""
+            }
+        })
+        </script>
+
+
+    </body>
+</html>

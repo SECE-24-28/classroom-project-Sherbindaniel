@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" id="t1">
+   <input type="text" id="t2">
+   <script>
+    let t1=document.getElementById("t1");
+    t1.addEventListener("keyup",()=>
+{
+    document.getElementById("t2").value=t1.value;
+})
+   </script> 
+
+    
+</body>
+</html>

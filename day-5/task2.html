@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            border-radius: 15px;
+        }
+        p{
+            color: aliceblue;
+            background-color: black;
+            align-items: center;
+            align-content: center;
+
+
+        }
+    </style>
+</head>
+<body>
+    <center><button onclick="loadusers()">Load Users</button></center>
+    <center><p id="pa"></p></center>
+
+    <script>
+        function loadusers() {
+            let para = document.getElementById("pa");
+
+            fetch("https://jsonplaceholder.typicode.aom/users")
+                .then(res => res.json())
+                .then(data => {
+                    let out = "";
+                    data.forEach(user => {
+                        out += `${user.id} <br> ${user.name} <br> ${user.email} <br><br>`;
+                    });
+                    para.innerHTML = out;
+                });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+          padding:0px;
+          margin:0px;
+        }
+        ol{
+            color: white;
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+            gap:10px
+        }
+        nav{
+            display: flex;
+            flex-wrap:wrap;
+            justify-content:space-between;
+            align-items:center;
+            padding:10px;
+            color: aliceblue;
+        }
+        h1{
+            color: white;
+        }
+        li{
+            font-size:1.2rem;
+            padding-left:10px;
+            cursor: pointer;
+        }
+        video{
+            position: absolute;
+            top:0px;
+            left:0px;
+            width:100vw;
+            height:100vh;
+            object-fit:cover;
+            z-index: -1;
+        }
+        .text{
+            position: fixed;
+            top:250px;
+            left:20px;
+            
+        }
+
+        nav a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        nav a:hover {
+            color: rgb(198, 199, 199)
+        }
+
+        p,h3{
+            color:white;
+            width: 900px;;
+            display: flex;
+        }
+        button{
+            margin-top:20px;
+            padding:10px;
+            border-radius:10px;
+            transition: all 0.3s;
+            left: 50%;
+            border: none;
+            outline: none;
+
+        }
+        button:hover{
+           letter-spacing:2px;
+           line-height:1.5rem;
+           color: black;
+           background-color: rgb(237, 244, 242);
+        }
+        img{
+            width: ;
+        }
+        footer{
+            position: fixed;
+            left: 20px;
+            
+        }
+        li.hover{
+
+        }
+                   
+        video::-webkit-media-controls {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>TRAVEL</h1>
+        <ol>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ol>
+    </nav>
+    <main>
+        <video src="natural.mp4" autoplay loop muted playsinline></video>
+
+    </main>
+    <div class="text">
+        <h1>NEVER STOP</h1>
+        <h3>EXPLORING THE WORLD</h3>
+        <br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus impedit voluptatem odio dicta harum sint sunt mollitia eligendi, incidunt vel error! Totam consequuntur possimus fugiat recusandae maxime sequi qui, amet quis fuga maiores ex, soluta animi cupiditate quasi harum provident fugit, quidem eos? Porro labore, nihil accusamus voluptatem, eos eius animi quas adipisci doloremque ipsa dignissimos praesentium voluptas magnam id, enim error earum repellendus omnis nisi repellat consectetur. Nihil provident magni, aspernatur laboriosam at eius totam alias et sed tempore ad beatae maiores harum accusamus, velit tempora fugit molestias nemo odit temporibus. Obcaecati quo velit nesciunt quia recusandae? Culpa, in?</p>
+        <button class="button">Explore</button>
+    </div>
+</body>
+</html>

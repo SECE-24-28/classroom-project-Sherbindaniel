@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fetch Data From REST API</h1>
+    <button id="bt" onclick="fetchRecords()">Fetch Info</button>
+    <div id="main" ></div>
+    <script>
+        
+         async function fetchRecords() 
+         {
+            try
+            {
+                 let res=await fetch("https://jsonplaceholder.typicode.com/users")
+            let data=await res.json()
+            let main=document.getElementById("main")
+             main.innerHTML=""
+            data.forEach((obj)=>
+                {
+                   let dv=document.createElement("div");
+dv.innerHTML=`<b>${obj.name}</b><br>  ${obj.username}<br>  ${obj.email} <br><br>`;
+                   main.appendChild(dv);
+                }
+            )
+            }
+            catch(error)
+            {
+                document.getElementById("main").innerHTML="There Is Some Error...."
+            }
+         }  
+    </script>
+</body>
+</html>

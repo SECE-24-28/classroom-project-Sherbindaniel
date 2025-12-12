@@ -1,11 +1,19 @@
-import React, { useContext } from 'react'
-import DataContext from './context/DataContext'
+import React from 'react'
 
-export const Search = () => {
-  const {search, setSearch} = useContext(DataContext)
+export const Search = ({search = '', setSearch = () => {}}) => {
   return (
-    <div>
-    <input type="text" value={search} placeholder='Search Posts' onChange={(e)=>setSearch(e.target.value)}/>
+    <div className="search-container">
+      <form onSubmit={(e) => e.preventDefault()}>
+        <label htmlFor="search">Search Posts</label>
+        <input
+          id="search"
+          type="text"
+          placeholder="Type to search posts by title or content..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="search-input"
+        />
+      </form>
     </div>
   )
 }

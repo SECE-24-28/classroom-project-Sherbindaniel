@@ -1,63 +1,25 @@
-import React, { useContext } from 'react'
-import DataContext from './context/DataContext'
+import React from 'react'
 
-export const AddPost = () => {
-  const {title,setTitle,body,setBody,handleSubmit}=useContext(DataContext)
+export const AddPost = ({title = '', setTitle = () => {}, body = '', setBody = () => {}, handleSubmit = () => {}}) => {
   return (
-    <div style={{
-      maxWidth: '600px',
-      margin: '20px auto',
-      padding: '20px',
-      backgroundColor: '#f8f9fa',
-      borderRadius: '8px',
-      boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
-    }}>
-        <h2 style={{color: '#495057', marginBottom: '20px'}}>Add New Post</h2>
-        <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', gap: '15px'}}>
+    <div className="add-post-container">
+        <h2 className="add-post-title">Add New Post</h2>
+        <form onSubmit={handleSubmit} className="add-post-form">
             <input 
               type="text" 
-              placeholder='Title' 
+              placeholder='Enter post title here...' 
               value={title} 
-              onChange={(e)=>setTitle(e.target.value)}
-              style={{
-                padding: '12px',
-                border: '1px solid #dee2e6',
-                borderRadius: '4px',
-                fontSize: '16px',
-                backgroundColor: '#fff'
-              }}
+              onChange={(e) => setTitle(e.target.value)}
+              className="form-input"
             />
             <textarea 
-              placeholder='Body' 
+              placeholder='Write your feedback content here...' 
               value={body} 
-              onChange={(e)=>setBody(e.target.value)}
+              onChange={(e) => setBody(e.target.value)}
               rows="4"
-              style={{
-                padding: '12px',
-                border: '1px solid #dee2e6',
-                borderRadius: '4px',
-                fontSize: '16px',
-                backgroundColor: '#fff',
-                resize: 'vertical'
-              }}
+              className="form-textarea"
             ></textarea>
-            <button 
-              type='submit'
-              style={{
-                padding: '12px 24px',
-                backgroundColor: '#6c757d',
-                color: 'white',
-                border: 'none',
-                borderRadius: '4px',
-                fontSize: '16px',
-                cursor: 'pointer',
-                alignSelf: 'flex-start'
-              }}
-              onMouseOver={(e) => e.target.style.backgroundColor = '#5a6268'}
-              onMouseOut={(e) => e.target.style.backgroundColor = '#6c757d'}
-            >
-              Save Post
-            </button>
+            <button type='submit' className="submit-button">Save Post</button>
         </form>
     </div>
   )

@@ -1,0 +1,28 @@
+{
+  "feedback": [
+    {
+      "id": "1",
+      "title": "First post",
+      "datetime": "APR 10,2024 12:11:45 PM",
+      "body": "First Post Details, This post is about React."
+    },
+    {
+      "id": "2",
+      "title": "Second post",
+      "datetime": "APR 10,2024 8:04:45 AM",
+      "body": "Second Post Details, This post is about Node.js."
+    },
+    {
+      "id": "3",
+      "title": "Third post",
+      "datetime": "12/11/2025, 2:54:15 PM",
+      "body": "Third Post Details, This post is about JS"
+    },
+    {
+      "id": 4,
+      "title": "Fourth post",
+      "datetime": "12/12/2025, 8:59:02 AM",
+      "body": "Fourth Post Details, This post is about HTML."
+    }
+  ]
+}

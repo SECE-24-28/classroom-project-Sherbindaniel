@@ -49,7 +49,7 @@ app.get("/api/courses/:id",async(req,res)=>
 }
 )
 
-app.post("/api/course",async(req,res)=>
+app.post("/api/courses",async(req,res)=>
 {
     try
     {
@@ -65,7 +65,7 @@ app.post("/api/course",async(req,res)=>
 
 })
 
-app.put("/api/course/:id",async(req,res)=>
+app.put("/api/courses/:id",async(req,res)=>
 {
     try
     {
@@ -84,7 +84,7 @@ app.put("/api/course/:id",async(req,res)=>
 })
 
 
-app.delete("/api/course/:id",async(req,res)=>
+app.delete("/api/courses/:id",async(req,res)=>
 {
     try
     {
